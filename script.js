@@ -66,7 +66,6 @@ $(document).ready(function(){
 
 
 
-// vars
 'use strict'
 var	testim = document.getElementById("testim"),
 		testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
@@ -85,7 +84,7 @@ var	testim = document.getElementById("testim"),
 
 window.onload = function() {
 
-    // Testim Script
+    
     function playSlide(slide) {
         for (var k = 0; k < testimDots.length; k++) {
             testimContent[k].classList.remove("active");
@@ -131,7 +130,7 @@ window.onload = function() {
 
     playSlide(currentSlide);
 
-    // keyboard shortcuts
+   
     document.addEventListener("keyup", function(e) {
         switch (e.keyCode) {
             case 37:
@@ -176,5 +175,22 @@ window.onload = function() {
 		})
 }
 
+var swiper = new Swiper('.blog-slider', {
+    spaceBetween: 30,
+    effect: 'fade',
+    loop: true,
+    mousewheel: {
+      invert: false,
+    },
+    // autoHeight: true,
+    pagination: {
+      el: '.blog-slider__pagination',
+      clickable: true,
+    }
+  });
 
 
+
+
+
+  
